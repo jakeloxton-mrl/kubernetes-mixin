@@ -447,7 +447,7 @@
                   "type": "prometheus",
                   "uid": "${datasource}"
                },
-               "expr": "sum(container_memory_rss{job=\"cadvisor\", container!=\"\"}) by (cluster)",
+               "expr": "sum(container_memory_rss{job=\"kubelet\", container!=\"\"}) by (cluster)",
                "legendFormat": "__auto"
             }
          ],
@@ -509,7 +509,7 @@
                   "type": "prometheus",
                   "uid": "${datasource}"
                },
-               "expr": "sum(container_memory_rss{job=\"cadvisor\", container!=\"\"}) by (cluster)",
+               "expr": "sum(container_memory_rss{job=\"kubelet\", container!=\"\"}) by (cluster)",
                "format": "table",
                "instant": true
             },
@@ -527,7 +527,7 @@
                   "type": "prometheus",
                   "uid": "${datasource}"
                },
-               "expr": "sum(container_memory_rss{job=\"cadvisor\", container!=\"\"}) by (cluster) / sum(kube_pod_container_resource_requests{job=\"kube-state-metrics\", resource=\"memory\"}) by (cluster)",
+               "expr": "sum(container_memory_rss{job=\"kubelet\", container!=\"\"}) by (cluster) / sum(kube_pod_container_resource_requests{job=\"kube-state-metrics\", resource=\"memory\"}) by (cluster)",
                "format": "table",
                "instant": true
             },
@@ -545,7 +545,7 @@
                   "type": "prometheus",
                   "uid": "${datasource}"
                },
-               "expr": "sum(container_memory_rss{job=\"cadvisor\", container!=\"\"}) by (cluster) / sum(kube_pod_container_resource_limits{job=\"kube-state-metrics\", resource=\"memory\"}) by (cluster)",
+               "expr": "sum(container_memory_rss{job=\"kubelet\", container!=\"\"}) by (cluster) / sum(kube_pod_container_resource_limits{job=\"kube-state-metrics\", resource=\"memory\"}) by (cluster)",
                "format": "table",
                "instant": true
             }
